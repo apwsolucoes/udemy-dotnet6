@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
+//Service configuration
+builder.Services.AddDbContext<AppDbContext>();
+
 var app = builder.Build();
 var configuration = app.Configuration;
 ProductRepository.Init(configuration);
