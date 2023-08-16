@@ -1,0 +1,25 @@
+// Aula 21: Repositório de dados
+
+//EntityFrameworkCore
+$ dotnet add package Microsoft.EntityFrameworkCore
+$ dotnet add package Microsoft.EntityFrameworkCore.Design
+$ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+//Migrations
+$ dotnet tool install --global dotnet-ef
+$ dotnet ef migrations add CreateProduct
+$ dotnet ef database update
+
+//ConnectionString
+Server=localhost,1433;Database=Products;User Id=X;Password=X;MultipleActiveResultSet=true;Encrypt=YES;TrustServerCertificate=YES
+
+//Aula 41
+# Revert migration 
+dotnet ef database update 20230816113552_001
+
+44. Relacionamento one to one
+$ dotnet ef migrations add ProductCategory
+$ dotnet ef database update
+45. Category Notnull
+
+46. Relacionamento one to many
